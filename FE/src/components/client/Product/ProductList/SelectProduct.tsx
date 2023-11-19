@@ -9,52 +9,7 @@ type SelectProductProps = {
 
 const { SHOW_PARENT } = TreeSelect;
 
-const treeData = [
-  {
-    title: "Danh mục",
-    value: "Danh mục",
-    key: "Danh mục",
-    children: [
-      {
-        title: "Điện thoại",
-        value: "Điện thoại",
-        key: "Điện thoại",
-      },
-      {
-        title: "Máy tính sách tay",
-        value: "Máy tính sách tay",
-        key: "Máy tính sách tay",
-      },
-      {
-        title: "Đồng hồ",
-        value: "Đồng hồ",
-        key: "Đồng hồ",
-      },
-    ],
-  },
-  {
-    title: "Thương hiệu",
-    value: "Thương hiệu",
-    key: "Thương hiệu",
-    children: [
-      {
-        title: "Iphone",
-        value: "Iphone",
-        key: "Iphone",
-      },
-      {
-        title: "Samsung",
-        value: "Samsung",
-        key: "Samsung",
-      },
-      {
-        title: "Nokia",
-        value: "Nokia",
-        key: "Nokia",
-      },
-    ],
-  },
-];
+
 
 const SelectProduct = ({ categories }: SelectProductProps) => {
   const [value, setValue] = useState<string[]>([]);
@@ -65,7 +20,7 @@ const SelectProduct = ({ categories }: SelectProductProps) => {
 
   const tProps = {
     value,
-    treeData,
+   
     onChange,
     treeCheckable: true,
     showCheckedStrategy: SHOW_PARENT,

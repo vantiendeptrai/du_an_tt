@@ -20,9 +20,9 @@ const ProductCard = ({ product, favoriteUser }: ProductCardProps) => {
 
   return (
     <>
-      <div className="col-span-1 cursor-pointer group rounded-xl p-3 border hover:scale-110">
-        <div className="flex flex-col justify-end gap-3 w-full">
-          <div className="flex flex-row justify-between">
+      <div className="col-span-1 cursor-pointer group rounded-xl p-3 border border-blue-500 hover:scale-110 ">
+        <div className="flex flex-col justify-end gap-3 w-full ">
+          <div className="flex flex-row justify-between ">
             {discount > 0 && (
               <div className="relative mt-[-15px] ml-[-15px]">
                 <div className="flex justify-center items-center bg-rose-500 rounded-r-2xl px-4 py-1">
@@ -80,7 +80,7 @@ const ProductCard = ({ product, favoriteUser }: ProductCardProps) => {
 
           <div className="flex flex-row gap-2 items-center">
             <div className="font-bold text-base text-[#ff424e]">
-              {product.price.toLocaleString("vi-VN")}₫
+              {product.price}000.VND
             </div>
 
             {product.price !== product.original_price && (
